@@ -23,17 +23,19 @@ class CustomBottomNavigation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
+      currentIndex: currentIndex,
+      onTap: (value) => onItemTap(context, value),
       items: const [
         BottomNavigationBarItem(
           icon: Icon(Icons.home),
           label: 'inicio',
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.home),
+          icon: Icon(Icons.person),
           label: 'personajes',
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.home),
+          icon: Icon(Icons.movie),
           label: 'episidios',
         )
       ]
